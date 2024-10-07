@@ -20,7 +20,7 @@ This project implements a job recommendation service using Node.js and MongoDB. 
    ```
    PORT=3000
    CORS_ORIGIN=*
-   MONGO_URL=mongodb+srv://zad:PL3RRYNA6GbCsFoe@cluster0.ylosiqb.mongodb.net
+   MONGO_URL=mongodb+srv://<UserName>:<Password>@cluster0.ylosiqb.mongodb.net
    ```
 
 4. Start the server:
