@@ -6,7 +6,7 @@ This project implements a job recommendation service using Node.js and MongoDB. 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/job-recommendation-service.git
+   git clone https://github.com/Gyanesh-Rao28/peopleBox_job_recommd.git
    cd job-recommendation-service
    ```
 
