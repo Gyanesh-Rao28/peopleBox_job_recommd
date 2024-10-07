@@ -63,13 +63,8 @@ const jobRecommd = async (req, res) => {
 
             if (score > 0) {
                 recommendations.push({
-                    job_title: job.job_title,
-                    company: job.company,
-                    location: job.location,
-                    job_type: job.job_type,
-                    required_skills: job.required_skills,
-                    experience_level: job.experience_level,
-                    score: score  // Keep score for sorting, but it won't be in the final output
+                    ...job.toObject(),  // Include all fields from the job document
+                    score: score
                 });
             }
         }
@@ -82,11 +77,9 @@ const jobRecommd = async (req, res) => {
             });
         }
 
-        // Remove the score from the output
-        const finalRecommendations = recommendations.map(({ score, ...rest }) => rest);
+        console.log(recommendations);
+        res.status(200).json(recommendations);
 
-        console.log(finalRecommendations);
-        res.status(200).json(finalRecommendations);
 
     } catch (error) {
         console.error('Error in recommendJobs:', error);
